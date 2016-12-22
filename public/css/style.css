@@ -1,0 +1,174 @@
+body {
+    width: 1350px;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: 'Montserrat', "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    /*background-color: #2F2F2F;*/
+    background-color: #191919;
+    color: white;
+}
+
+#page {
+    margin-top: 80px;
+}
+
+.image-gallery {
+    margin-top: 10px;
+    text-align: center;
+    /*background-color:  #202020;*/
+}
+
+.image-box {
+    width: 430px;
+    height: 470px;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
+
+    background-color: #2F2F31;
+}
+
+.image-gallery .image-box:after {
+    content: '';
+    display: block;
+    position: absolute;
+    opacity: 1;
+    top: 5px;
+    width: 420px;
+    height: 420px;
+    box-shadow:inset 0px 0px 90px rgba(0,0,0,.8);
+    z-index: 1;
+    transition: 0.2s;
+}
+
+.image-gallery .image-box:hover:after {
+    opacity: 0;
+    z-index: -1;
+    transition-property: z-index, opacity;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+}
+
+/*.image-gallery .image-box img {
+    cursor: crosshair;
+}*/
+
+.image-box .image-btn {
+    color: white;
+    font-size: 1.5em;
+
+    left: 5px;
+    right: -5px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    line-height: 40px;
+    height: 40px;
+    width: 420px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+.image-box .delete-image-btn {
+    bottom: 45px;
+}
+.image-box .edit-image-btn {
+    top: 5px;
+}
+
+.image-box:hover .image-btn {
+    text-decoration: none;
+    visibility: visible;
+    opacity: 1;
+    z-index: 20;
+}
+
+.delete-image-btn:hover {
+    background-color: rgba(150, 0, 0, 0.8);
+}
+.edit-image-btn:hover {
+    background-color: rgba(0, 50, 130, 0.8);
+}
+
+.image-box .details {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    text-align: left;
+    color: #999;
+}
+
+.image-box .details-user-name {
+    text-transform: capitalize;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ccc;
+
+}
+
+.close {
+    margin-right: 100px;
+}
+
+.details a {
+    color: inherit;
+    text-decoration: none;
+}
+.details a:hover {
+    transition: 0.2s;
+    color: white;
+}
+
+.editor {
+    position: relative;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editor-image {
+    width: 430px;
+	border: solid 5px #2F2F31;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.28);
+}
+
+.editor-toolbar {
+    margin-left: 20px;
+}
+
+.editor-toolbar ul {
+    list-style-type: none;
+}
+
+.editor-toolbar-actions {
+    position: absolute;
+    bottom: 0;
+}
+
+
+.editor-palette {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.palette-color {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    cursor: crosshair;
+}
+
+.palette-color > span {
+    opacity: 0;
+    transition: 0.2s;
+}
+.palette-color:hover > span {
+    opacity: 1;
+}
