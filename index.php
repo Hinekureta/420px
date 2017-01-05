@@ -47,7 +47,7 @@ if (isset($_GET["p"])) {
 <html>
     <head>
     <meta charset="utf-8">
-    <title>Kevinpx</title>
+    <title>420Kevinpx</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="//bootswatch.com/darkly/bootstrap.min.css">
     <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
